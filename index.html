@@ -53,17 +53,31 @@
         font-weight: 400;
         font-style: normal;
       }
+      .heart {
+        animation: pulse 2s infinite ease-in-out;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: translateX(-50%) scale(1);
+          opacity: 0.8;
+        }
+        50% {
+          transform: translateX(-50%) scale(1.25);
+          opacity: 1;
+        }
+      }
     </style>
   </head>
 
-  <body class="bg-beige  text-[#3b3b3b] font-sans overflow-x-hidden">
+  <body class="bg-beige text-[#3b3b3b] font-sans overflow-x-hidden">
     <!-- HERO -->
     <section
       class="relative min-h-screen flex items-center justify-center text-center bg-[url('images/bg-hero.jpg')] bg-cover bg-center bg-fixed fade mb-20"
     >
       <div class="absolute bg-black/45 w-full h-full left-0 top-0"></div>
       <div
-        class="relative z-10 px-10 py-14 flex flex-col gap-16 justify-between max-w-xl text-white"
+        class="relative z-10 md:px-10 px-2 py-14 flex flex-col gap-16 justify-between max-w-xl text-white"
       >
         <div class="font-serif text-6xl">
           <div>Анна</div>
@@ -94,100 +108,170 @@
     </section>
 
     <!-- STORY -->
-    <section class="max-w-5xl mx-auto px-5 py-24 fade">
+    <section class="max-w-5xl mx-auto px-5 pt-24 pb-8 fade">
       <h2 class="font-serif text-3xl text-center mb-12">Наша история</h2>
-      <div class="grid md:grid-cols-2 gap-16 items-center">
-        <p class="text-center">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi,
-          nobis?
-        </p>
+
+      <p class="text-center">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi,
+        nobis?
+      </p>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="max-w-full mx-auto fade">
+      <div class="grid grid-cols-1 grid-cols-3 md:gap-8 gap-1 relative">
         <img
-          class="w-full"
-          src="images/1.jpg"
+          src="images/4.jpg"
+          class="object-cover max-h-full w-full"
+        />
+        <img
+          src="images/5.jpg"
+          class="object-cover max-h-full w-full"
+        />
+        <img
+          src="images/6.jpg"
+          class="object-cover max-h-full md:-mr-32 w-full"
         />
       </div>
     </section>
 
     <!-- DAY -->
-    <section class="max-w-5xl mx-auto px-5 py-24 fade">
-      <h2 class="font-serif text-3xl text-center mb-12">Программа дня</h2>
-      <div class="grid md:grid-cols-2 gap-12">
-        <div class="bg-beige-dark p-10 border-l-4 border-green">
-          <h3 class="font-source text-3xl text-green mb-2">Торжественная регистрация</h3>
-          <p>26.04.2026, 14:00</p>
-          <p>Адрес ЗАГСа</p>
-        </div>
-        <div class="bg-beige-dark p-10 border-l-4 border-green">
-          <h3 class="font-source text-3xl text-green mb-2">Праздничный ужин</h3>
-          <p>26.04.2026, 15:40</p>
-          <p>Адрес ресторана</p>
-        </div>
+    <section class="max-w-3xl mx-auto px-5 py-24 fade relative">
+      <h2 class="font-serif text-3xl text-center mb-20">Программа дня</h2>
+
+      <div
+        class="absolute left-1/2 top-32 bottom-0 w-px bg-green/40 -translate-x-1/2"
+      ></div>
+
+      <div class="relative mb-32 flex flex-col items-center text-center">
+        <div class="w-3 h-3 bg-green mb-6"></div>
+        <h3 class="font-source text-3xl text-green mb-2">
+          Торжественная регистрация
+        </h3>
+        <p class="text-sm uppercase tracking-widest mb-1">26 апреля 2026</p>
+        <p class="opacity-80">14:00 · Адрес ЗАГСа</p>
+      </div>
+
+      <div class="relative flex flex-col items-center text-center">
+        <div class="w-3 h-3 bg-green mb-6"></div>
+        <h3 class="font-source text-3xl text-green mb-2">Праздничный ужин</h3>
+        <p class="text-sm uppercase tracking-widest mb-1">26 апреля 2026</p>
+        <p class="opacity-80">15:40 · Адрес ресторана</p>
       </div>
     </section>
 
     <!-- REQUESTS -->
-    <section class="max-w-5xl mx-auto px-5 py-24 fade">
-      <h2 class="font-serif text-3xl text-center mb-12">
+    <section class="max-w-6xl mx-auto px-5 py-32 fade relative">
+      <h2 class="font-serif text-3xl text-center mb-20">
         Небольшие просьбы от нас
       </h2>
-      <div class="grid md:grid-cols-2 gap-12">
-        <div class="bg-beige-dark p-10">
-          <h3 class="font-serif text-xl mb-3">Напитки вместо цветов</h3>
-          <p>
-            Пожалуйста, не дарите нам цветы. Мы будем рады бутылочке вашего
-            любимого напитка.
+
+      <div class="grid md:grid-cols-2 gap-24 items-center">
+        <div class="flex flex-col gap-6">
+          <img
+            src="https://via.placeholder.com/600x420?text=Wine+or+Drinks"
+            alt="Напитки"
+            class="w-full object-cover"
+          />
+          <h3 class="font-source text-green text-4xl">Напитки вместо цветов</h3>
+          <p class="leading-relaxed opacity-90">
+            Пожалуйста, не дарите нам цветы. Мы будем счастливы пополнить нашу
+            первую домашнюю коллекцию бутылочкой вашего любимого напитка.
           </p>
         </div>
-        <div class="bg-beige-dark p-10">
-          <h3 class="font-serif text-xl mb-3">Вклад в мечты</h3>
-          <p>
-            Ваше присутствие — главный подарок. Если захотите сделать сюрприз,
-            мы будем признательны.
+
+        <div class="flex flex-col gap-6 md:mt-32">
+          <img
+            src="https://via.placeholder.com/600x420?text=Dreams"
+            alt="Мечты"
+            class="w-full object-cover"
+          />
+          <h3 class="font-source text-green text-4xl">Вклад в мечты</h3>
+          <p class="leading-relaxed opacity-90">
+            Ваше присутствие — самый главный подарок для нас. Но если вы
+            захотите сделать сюрприз, мы будем искренне признательны за вклад в
+            наше общее будущее.
           </p>
         </div>
       </div>
     </section>
 
     <!-- FORM -->
-    <section class="max-w-xl mx-auto px-5 py-24 fade">
-      <h2 class="font-serif text-3xl text-center mb-12">Подтвердите участие</h2>
-      <form id="rsvp" class="grid gap-4">
-        <input
-          name="name"
-          placeholder="Имя и фамилия"
-          required
-          class="p-4 border"
+    <section class="relative fade">
+      <div class="absolute inset-0">
+        <img
+          src="https://via.placeholder.com/1600x900?text=Wedding+Mood"
+          class="w-full h-full object-cover"
         />
-        <select name="attend" required class="p-4 border">
-          <option value="">Вы придёте?</option>
-          <option value="yes">С радостью!</option>
-          <option value="no">К сожалению, не смогу</option>
-        </select>
-        <select name="guests" id="guests" required class="p-4 border">
-          <option value="">Количество гостей</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="child">С ребёнком</option>
-        </select>
-        <input
-          id="childAge"
-          name="child_age"
-          placeholder="Возраст ребёнка"
-          class="p-4 border hidden"
-        />
-        <input name="plusone" placeholder="ФИО спутника" class="p-4 border" />
-        <input
-          name="contact"
-          placeholder="Телефон или email"
-          class="p-4 border"
-        />
-        <button
-          class="bg-green text-white py-4 mt-4 hover:bg-green-dark transition"
-        >
-          Отправить ответ
-        </button>
-        <p id="formMessage" class="text-center"></p>
-      </form>
+        <div class="absolute inset-0 bg-beige/80"></div>
+      </div>
+
+      <div class="relative max-w-xl mx-auto px-6 py-32">
+        <h2 class="font-serif text-3xl text-center mb-12">
+          Подтвердите участие
+        </h2>
+
+        <form id="rsvp" class="grid gap-6">
+          <div class="flex flex-col gap-1">
+            <label class="text-sm opacity-70">Имя и фамилия</label>
+            <input name="name" required class="p-4 border bg-transparent" />
+          </div>
+
+          <div class="flex flex-col gap-1">
+            <label class="text-sm opacity-70">Вы придёте?</label>
+            <select name="attend" required class="p-4 border bg-transparent">
+              <option value="">Выберите вариант</option>
+              <option value="yes">С радостью!</option>
+              <option value="no">К сожалению, не смогу</option>
+            </select>
+          </div>
+
+          <div class="flex flex-col gap-1">
+            <label class="text-sm opacity-70">Количество гостей</label>
+            <select
+              name="guests"
+              id="guests"
+              required
+              class="p-4 border bg-transparent"
+            >
+              <option value="">Выберите</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="2_child">2, с ребёнком</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+
+          <div id="plusOneField" class="flex flex-col gap-1 hidden">
+            <label class="text-sm opacity-70">ФИО спутника</label>
+            <input name="plusone" class="p-4 border bg-transparent" />
+          </div>
+
+          <div id="plusTwoField" class="flex flex-col gap-1 hidden">
+            <label class="text-sm opacity-70">ФИО второго спутника</label>
+            <input name="plustwo" class="p-4 border bg-transparent" />
+          </div>
+
+          <div id="childAgeField" class="flex flex-col gap-1 hidden">
+            <label class="text-sm opacity-70">Возраст ребёнка</label>
+            <input name="child_age" class="p-4 border bg-transparent" />
+          </div>
+
+          <div class="flex flex-col gap-1">
+            <label class="text-sm opacity-70">Телефон или email</label>
+            <input name="contact" class="p-4 border bg-transparent" />
+          </div>
+
+          <button
+            class="bg-green text-white py-4 mt-6 hover:bg-green-dark transition"
+          >
+            Отправить ответ
+          </button>
+
+          <p class="text-sm opacity-60 text-center"></p>
+          <p id="formMessage" class="text-center"></p>
+        </form>
+      </div>
     </section>
 
     <footer class="text-center py-16 text-sm opacity-70">
@@ -195,31 +279,79 @@
     </footer>
 
     <script>
-      const weddingDate = new Date("2026-04-26T14:00:00");
-      setInterval(() => {
-        const diff = weddingDate - new Date();
-        if (diff < 0) return;
-        days.textContent = Math.floor(diff / 86400000);
-        hours.textContent = Math.floor(diff / 3600000) % 24;
-        minutes.textContent = Math.floor(diff / 60000) % 60;
-        seconds.textContent = Math.floor(diff / 1000) % 60;
-      }, 1000);
+      document.addEventListener("DOMContentLoaded", () => {
+        // TIMER
+        const weddingDate = new Date("2026-04-26T14:00:00");
+        setInterval(() => {
+          const diff = weddingDate - new Date();
+          if (diff < 0) return;
+          days.textContent = Math.floor(diff / 86400000);
+          hours.textContent = Math.floor(diff / 3600000) % 24;
+          minutes.textContent = Math.floor(diff / 60000) % 60;
+          seconds.textContent = Math.floor(diff / 1000) % 60;
+        }, 1000);
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(
-            (e) => e.isIntersecting && e.target.classList.add("visible")
-          );
-        },
-        { threshold: 0.2 }
-      );
-      document.querySelectorAll(".fade").forEach((el) => observer.observe(el));
+        // FADE IN
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(
+              (e) => e.isIntersecting && e.target.classList.add("visible")
+            );
+          },
+          { threshold: 0.2 }
+        );
+        document
+          .querySelectorAll(".fade")
+          .forEach((el) => observer.observe(el));
 
-      const guests = document.getElementById("guests");
-      const childAge = document.getElementById("childAge");
+        // FORM LOGIC
+        const guests = document.getElementById("guests");
+        const plusOneField = document.getElementById("plusOneField");
+        const plusTwoField = document.getElementById("plusTwoField");
+        const childAgeField = document.getElementById("childAgeField");
 
-      guests.addEventListener("change", () => {
-        childAge.classList.toggle("hidden", guests.value !== "child");
+        guests.addEventListener("change", () => {
+          plusOneField.classList.add("hidden");
+          plusTwoField.classList.add("hidden");
+          childAgeField.classList.add("hidden");
+
+          if (guests.value === "2") {
+            plusOneField.classList.remove("hidden");
+          }
+
+          if (guests.value === "2_child") {
+            childAgeField.classList.remove("hidden");
+          }
+
+          if (guests.value === "3") {
+            plusOneField.classList.remove("hidden");
+            childAgeField.classList.remove("hidden");
+          }
+        });
+
+        const form = document.getElementById("rsvp");
+        const formMessage = document.getElementById("formMessage");
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          fetch(
+            "https://script.google.com/macros/s/AKfycbz3Y2TUD2wCsAW8U0ogRGfA8uV477tnQRxsAld0hBlQ0zN5m-XXZ_3u4_147X7mYZhv1w/exec",
+            {
+              method: "POST",
+              body: new FormData(form),
+            }
+          )
+            .then(() => {
+              formMessage.textContent = "Спасибо! Мы получили ваш ответ 🤍";
+              form.reset();
+              plusOneField.classList.add("hidden");
+              childAgeField.classList.add("hidden");
+            })
+            .catch(() => {
+              formMessage.textContent = "Ошибка отправки. Попробуйте позже.";
+            });
+        });
       });
     </script>
   </body>
