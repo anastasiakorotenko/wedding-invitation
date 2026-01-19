@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -73,7 +73,7 @@
   <body class="bg-beige text-[#3b3b3b] font-sans overflow-x-hidden">
     <!-- HERO -->
     <section
-      class="relative min-h-screen flex items-center justify-center text-center bg-[url('images/bg-hero.jpg')] bg-cover bg-center bg-fixed fade mb-20"
+      class="relative min-h-screen flex items-center justify-center text-center md:bg-[url('images/bg-hero.jpg')] bg-[url('images/bg-hero-phone.jpg')] bg-cover bg-center bg-fixed fade mb-20"
     >
       <div class="absolute bg-black/45 w-full h-full left-0 top-0"></div>
       <div
@@ -108,17 +108,14 @@
     </section>
 
     <!-- STORY -->
-    <section class="max-w-5xl mx-auto px-5 pt-24 pb-8 fade">
-      <h2 class="font-serif text-3xl text-center mb-12">Наша история</h2>
+    <section class="max-w-5xl mx-auto px-5 pt-16 pb-8 fade">
+      <h2 class="font-serif text-4xl text-center mb-8">Наша история</h2>
 
-      <p class="text-center">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi,
-        nobis?
-      </p>
+      <p class="text-center">Здесь будет какой-то текст</p>
     </section>
 
     <!-- GALLERY -->
-    <section class="max-w-full mx-auto fade">
+    <section class="max-w-full mx-auto pb-24 fade">
       <div class="grid grid-cols-1 grid-cols-3 md:gap-8 gap-1 relative">
         <img src="images/1.jpg" class="object-cover max-h-full w-full" />
         <img src="images/2.jpg" class="object-cover max-h-full w-full" />
@@ -131,7 +128,7 @@
 
     <!-- DAY -->
     <section class="max-w-3xl mx-auto px-5 py-24 fade relative">
-      <h2 class="font-serif text-3xl text-center mb-20">Программа дня</h2>
+      <h2 class="font-serif text-4xl text-center mb-20">Программа дня</h2>
 
       <div
         class="absolute left-1/2 top-32 bottom-0 w-px bg-green/40 -translate-x-1/2"
@@ -156,17 +153,12 @@
 
     <!-- REQUESTS -->
     <section class="max-w-6xl mx-auto px-5 py-32 fade relative">
-      <h2 class="font-serif text-3xl text-center mb-20">
+      <h2 class="font-serif text-4xl text-center mb-20">
         Небольшие просьбы от нас
       </h2>
 
       <div class="grid md:grid-cols-2 gap-24 items-center">
         <div class="flex flex-col gap-6">
-          <img
-            src="https://via.placeholder.com/600x420?text=Wine+or+Drinks"
-            alt="Напитки"
-            class="w-full object-cover"
-          />
           <h3 class="font-source text-green text-4xl">Напитки вместо цветов</h3>
           <p class="leading-relaxed opacity-90">
             Пожалуйста, не дарите нам цветы. Мы будем счастливы пополнить нашу
@@ -174,12 +166,7 @@
           </p>
         </div>
 
-        <div class="flex flex-col gap-6 md:mt-32">
-          <img
-            src="https://via.placeholder.com/600x420?text=Dreams"
-            alt="Мечты"
-            class="w-full object-cover"
-          />
+        <div class="flex flex-col gap-6">
           <h3 class="font-source text-green text-4xl">Вклад в мечты</h3>
           <p class="leading-relaxed opacity-90">
             Ваше присутствие — самый главный подарок для нас. Но если вы
@@ -191,14 +178,14 @@
     </section>
 
     <!-- FORM -->
-    <section class="relative fade text-white">
+    <section class="relative fade">
       <div class="absolute inset-0">
         <img src="images/bg-form.jpg" class="w-full h-full object-cover" />
         <div class="absolute bg-black/50 w-full h-full left-0 top-0"></div>
       </div>
 
-      <div class="relative max-w-xl mx-auto px-6 py-32">
-        <h2 class="font-serif text-5xl text-center mb-12">
+      <div class="relative max-w-xl mx-auto px-6 py-32 text-white">
+        <h2 class="font-serif text-4xl text-center mb-12">
           Подтвердите участие
         </h2>
 
@@ -209,11 +196,15 @@
           </div>
 
           <div class="flex flex-col gap-1">
-            <label class="text-sm opacity-70">Вы придёте?</label>
+            <label class="text-sm opacity-70">Вы придете?</label>
             <select name="attend" required class="p-4 border bg-transparent">
-              <option value="">Выберите вариант</option>
-              <option value="yes">С радостью!</option>
-              <option value="no">К сожалению, не смогу</option>
+              <option value="default" class="text-black">
+                Выберите вариант
+              </option>
+              <option value="Придет" class="text-black">С радостью!</option>
+              <option value="Не придет" class="text-black">
+                К сожалению, не смогу
+              </option>
             </select>
           </div>
 
@@ -225,11 +216,15 @@
               required
               class="p-4 border bg-transparent"
             >
-              <option value="">Выберите</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="2_child">2, с ребёнком</option>
-              <option value="3">3</option>
+              <option value="default" class="text-black">Выберите</option>
+              <option value="1" class="text-black">1</option>
+              <option value="2" class="text-black">2</option>
+              <option value="2, с ребенком" class="text-black">
+                2, с ребенком
+              </option>
+              <option value="3, с ребенком" class="text-black">
+                3, с ребенком
+              </option>
             </select>
           </div>
 
@@ -238,18 +233,15 @@
             <input name="plusone" class="p-4 border bg-transparent" />
           </div>
 
-          <div id="plusTwoField" class="flex flex-col gap-1 hidden">
-            <label class="text-sm opacity-70">ФИО второго спутника</label>
-            <input name="plustwo" class="p-4 border bg-transparent" />
-          </div>
-
           <div id="childAgeField" class="flex flex-col gap-1 hidden">
-            <label class="text-sm opacity-70">Возраст ребёнка</label>
+            <label class="text-sm opacity-70">Возраст ребенка</label>
             <input name="child_age" class="p-4 border bg-transparent" />
           </div>
 
           <div class="flex flex-col gap-1">
-            <label class="text-sm opacity-70">Телефон или email</label>
+            <label class="text-sm opacity-70"
+              >Телефон или email (необязательно)</label
+            >
             <input name="contact" class="p-4 border bg-transparent" />
           </div>
 
@@ -259,15 +251,21 @@
             Отправить ответ
           </button>
 
+          <div
+            id="loader"
+            class="hidden flex justify-center items-center gap-3 mt-6 text-sm opacity-80"
+          >
+            <span
+              class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"
+            ></span>
+            <span>Отправляем ответ…</span>
+          </div>
+
           <p class="text-sm opacity-60 text-center"></p>
           <p id="formMessage" class="text-center"></p>
         </form>
       </div>
     </section>
-
-    <footer class="text-center py-16 text-sm opacity-70">
-      С любовью, Игорь и Аня 🤍
-    </footer>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -286,10 +284,10 @@
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach(
-              (e) => e.isIntersecting && e.target.classList.add("visible")
+              (e) => e.isIntersecting && e.target.classList.add("visible"),
             );
           },
-          { threshold: 0.2 }
+          { threshold: 0.2 },
         );
         document
           .querySelectorAll(".fade")
@@ -298,23 +296,21 @@
         // FORM LOGIC
         const guests = document.getElementById("guests");
         const plusOneField = document.getElementById("plusOneField");
-        const plusTwoField = document.getElementById("plusTwoField");
         const childAgeField = document.getElementById("childAgeField");
 
         guests.addEventListener("change", () => {
           plusOneField.classList.add("hidden");
-          plusTwoField.classList.add("hidden");
           childAgeField.classList.add("hidden");
 
           if (guests.value === "2") {
             plusOneField.classList.remove("hidden");
           }
 
-          if (guests.value === "2_child") {
+          if (guests.value === "2, с ребенком") {
             childAgeField.classList.remove("hidden");
           }
 
-          if (guests.value === "3") {
+          if (guests.value === "3, с ребенком") {
             plusOneField.classList.remove("hidden");
             childAgeField.classList.remove("hidden");
           }
@@ -323,23 +319,30 @@
         const form = document.getElementById("rsvp");
         const formMessage = document.getElementById("formMessage");
 
+        const loader = document.getElementById("loader");
+
         form.addEventListener("submit", (e) => {
           e.preventDefault();
 
+          formMessage.textContent = "";
+          loader.classList.remove("hidden");
+
           fetch(
-            "https://script.google.com/macros/s/AKfycbz3Y2TUD2wCsAW8U0ogRGfA8uV477tnQRxsAld0hBlQ0zN5m-XXZ_3u4_147X7mYZhv1w/exec",
+            "https://script.google.com/macros/s/AKfycbznhSW6lEBew4hdqiitGgWYdHGVdwhawWh4YHQJ-lZEiYqc2VsWhKEcXXug-MTBQuAbzg/exec",
             {
               method: "POST",
               body: new FormData(form),
-            }
+            },
           )
             .then(() => {
+              loader.classList.add("hidden");
               formMessage.textContent = "Спасибо! Мы получили ваш ответ 🤍";
               form.reset();
               plusOneField.classList.add("hidden");
               childAgeField.classList.add("hidden");
             })
             .catch(() => {
+              loader.classList.add("hidden");
               formMessage.textContent = "Ошибка отправки. Попробуйте позже.";
             });
         });
