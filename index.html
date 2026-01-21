@@ -228,7 +228,7 @@
         П<span class="font-title uppercase text-3xl">ожелания</span>
       </h2>
 
-      <div class="grid md:grid-cols-2 gap-20 ">
+      <div class="grid md:grid-cols-2 gap-20">
         <div class="flex flex-col gap-6">
           <p class="leading-relaxed opacity-90">
             Просим не дарить нам цветы, прекрасной альтернативой станет бутылка
@@ -242,7 +242,6 @@
           </p>
         </div>
       </div>
-
     </section>
 
     <!-- Анкета -->
@@ -262,13 +261,26 @@
         </h2>
 
         <form id="rsvp" class="grid gap-6">
+          <div class="flex flex-col items-center">
+            <p class="text-sm text-center">
+              Пожалуйста, подтвердите свое присутствие на торжестве и ответьте
+              на несколько вопросов
+            </p>
+            <p class="font-title text-2xl">до 26.02.2026</p>
+          </div>
+
           <div class="flex flex-col gap-1">
             <label class="text-sm opacity-70">Имя и фамилия</label>
             <input name="name" required class="p-4 border bg-transparent" />
           </div>
 
           <div class="flex flex-col gap-1">
-            <label class="text-sm opacity-70">Вы придете?</label>
+            <label class="text-sm opacity-70"
+              >Вы придете?
+              <span class="opacity-60"
+                >(Заполняется только 1 гостем на пару)</span
+              ></label
+            >
             <div class="select-wrapper">
               <select
                 name="attend"
