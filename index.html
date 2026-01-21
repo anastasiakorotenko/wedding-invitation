@@ -92,7 +92,7 @@
     </style>
   </head>
 
-  <body class="bg-beige text-[#3b3b3b] font-sans overflow-x-hidden">
+  <body class="bg-beige font-sans overflow-x-hidden">
     <!-- главный -->
     <section
       class="relative min-h-screen flex items-center justify-center text-center md:bg-[url('images/bg-hero.jpg')] bg-[url('images/bg-hero-phone.jpg')] bg-cover bg-center bg-fixed fade mb-20"
@@ -103,9 +103,9 @@
         class="relative z-10 md:px-10 px-2 py-14 flex flex-col gap-16 justify-between max-w-3xl text-white"
       >
         <div class="font-title text-6xl">
-          <div>Анна</div>
-          <div>&</div>
-          <div>Игорь</div>
+          <p>Анна</p>
+          <p>&</p>
+          <p>Игорь</p>
         </div>
 
         <div class="font-source text-3xl px-10">
@@ -159,11 +159,20 @@
     <!-- Галерея -->
     <section class="max-w-full mx-auto pb-24 fade">
       <div class="grid grid-cols-1 grid-cols-3 md:gap-8 gap-1 relative">
-        <img src="images/1.jpg" class="object-cover max-h-full w-full" />
-        <img src="images/2.jpg" class="object-cover max-h-full w-full" />
+        <img
+          src="images/1.jpg"
+          class="object-cover max-h-full w-full"
+          alt="img1"
+        />
+        <img
+          src="images/2.jpg"
+          class="object-cover max-h-full w-full"
+          alt="img2"
+        />
         <img
           src="images/3.jpg"
           class="object-cover max-h-full md:-mr-32 w-full"
+          alt="img3"
         />
       </div>
     </section>
@@ -219,29 +228,31 @@
         П<span class="font-title uppercase text-3xl">ожелания</span>
       </h2>
 
-      <div class="grid md:grid-cols-2 gap-24 items-center">
+      <div class="grid md:grid-cols-2 gap-20 ">
         <div class="flex flex-col gap-6">
-          <p class="font-source text-green text-4xl">Напитки вместо цветов</p>
           <p class="leading-relaxed opacity-90">
             Просим не дарить нам цветы, прекрасной альтернативой станет бутылка
             вашего любимого вина
           </p>
         </div>
-
         <div class="flex flex-col gap-6">
-          <p class="font-source text-green text-4xl">Вклад в мечты</p>
           <p class="leading-relaxed opacity-90">
             Если хотите сделать нам ценный и нужный подарок, мы будем
             признательны за вклад в бюджет нашей молодой семьи
           </p>
         </div>
       </div>
+
     </section>
 
     <!-- Анкета -->
     <section class="relative fade">
       <div class="absolute inset-0">
-        <img src="images/bg-form.jpg" class="w-full h-full object-cover" />
+        <img
+          src="images/bg-form.jpg"
+          class="w-full h-full object-cover"
+          alt="image"
+        />
         <div class="absolute bg-black/50 w-full h-full left-0 top-0"></div>
       </div>
 
