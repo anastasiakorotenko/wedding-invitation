@@ -102,7 +102,7 @@
       <div
         class="relative z-10 md:px-10 px-2 py-14 flex flex-col gap-16 justify-between max-w-3xl text-white"
       >
-        <div class="font-title text-6xl">
+        <div class="font-title text-[42px] leading-[48px] uppercase">
           <p>Анна</p>
           <p>&</p>
           <p>Игорь</p>
@@ -115,7 +115,7 @@
             наша свадьба. Мы будем счастливы, если вы проведете вместе с нами
             этот особенный день
           </p>
-          <p class="font-title text-4xl">26.04.2026</p>
+          <!-- <p class="font-title text-4xl">25.04.2026</p> -->
         </div>
 
         <div class="flex gap-5 flex-col items-center">
@@ -148,99 +148,163 @@
       </div>
     </section>
 
-    <!-- История -->
-    <section class="max-w-5xl mx-auto px-5 pt-16 pb-8 fade">
-      <h2 class="font-serif text-5xl text-center mb-8">
-        H<span class="font-title uppercase text-3xl">аша история</span>
-      </h2>
+    <section class="max-w-6xl mx-auto px-6 py-32">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <!-- КАЛЕНДАРЬ -->
+        <div class="text-center max-w-[450px]">
+          <h3 class="font-serif text-4xl mb-6">Апрель</h3>
 
-      <p class="text-center">Здесь будет какой-то текст</p>
-    </section>
+          <div class="grid grid-cols-7 text-xs tracking-widest opacity-60 mb-3">
+            <span>ПН</span><span>ВТ</span><span>СР</span> <span>ЧТ</span
+            ><span>ПТ</span><span>СБ</span><span>ВС</span>
+          </div>
 
-    <!-- Галерея -->
-    <section class="max-w-full mx-auto pb-24 fade">
-      <div class="grid grid-cols-1 grid-cols-3 md:gap-8 gap-1 relative">
-        <img
-          src="images/1.jpg"
-          class="object-cover max-h-full w-full"
-          alt="img1"
-        />
-        <img
-          src="images/2.jpg"
-          class="object-cover max-h-full w-full"
-          alt="img2"
-        />
-        <img
-          src="images/3.jpg"
-          class="object-cover max-h-full md:-mr-32 w-full"
-          alt="img3"
-        />
+          <div class="grid grid-cols-7 gap-y-3 text-sm relative">
+            <span></span><span></span>
+
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+
+            <span>6</span><span>7</span><span>8</span><span>9</span
+            ><span>10</span><span>11</span><span>12</span> <span>13</span
+            ><span>14</span><span>15</span><span>16</span><span>17</span
+            ><span>18</span><span>19</span> <span>20</span><span>21</span
+            ><span>22</span><span>23</span>
+
+            <span class="relative inline-flex justify-center items-center">
+              26
+              <img
+                src="images/heart1.png"
+                alt="heart"
+                class="absolute -top-1 left-0.5 w-full h-auto"
+              />
+            </span>
+
+            <span>24</span><span>25</span> <span>27</span><span>28</span
+            ><span>29</span><span>30</span>
+          </div>
+        </div>
+
+        <!-- ФОТО -->
+        <div
+          class="relative flex mt-10 md:mt-0"
+        >
+          <div class="bg-white p-3 shadow-xl rotate-[-3deg]">
+            <img
+              src="images/1.jpg"
+              class="w-60 md:w-80 object-cover"
+              alt="молодожены1"
+            />
+          </div>
+          <div
+            class="bg-white p-3 shadow-xl rotate-[6deg] absolute -bottom-16 right-6 md:-right-12"
+          >
+            <img
+              src="images/2.jpg"
+              class="w-52 md:w-60 object-cover"
+              alt="молодожены2"
+            />
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Программа -->
-    <section class="max-w-3xl mx-auto px-5 py-24 fade relative">
-      <h2 class="font-serif text-5xl text-center mb-20">
-        П<span class="font-title uppercase text-3xl">рограмма</span>
+    <!-- тайминг дня -->
+    <section class="max-w-3xl mx-auto px-5 py-24 relative">
+      <h2 class="font-serif text-5xl text-center mb-20 fade">
+        Т<span class="font-title uppercase text-3xl">айминг дня</span>
       </h2>
 
       <div
-        class="absolute left-1/2 top-32 bottom-0 w-px bg-green/40 -translate-x-1/2"
+        class="absolute fade left-1/2 top-32 bottom-0 w-px bg-green/40 -translate-x-1/2"
       ></div>
 
-      <div class="relative mb-20 flex flex-col items-center text-center">
+      <div class="relative fade mb-20 flex flex-col items-center text-center">
         <div class="w-3 h-3 bg-green mb-6"></div>
         <p class="font-serif text-6xl text-green mb-2">14:00</p>
         <p class="text-md tracking-widest">Сбор гостей</p>
+        <p class="opacity-80 text-sm tracking-widest">
+          ул. Мостовая, 100, возле ЗАГСа
+        </p>
       </div>
 
-      <div class="relative mb-20 flex flex-col items-center text-center">
+      <div class="relative fade mb-20 flex flex-col items-center text-center">
         <div class="w-3 h-3 bg-green mb-6"></div>
         <p class="font-serif text-6xl text-green mb-2">14:30</p>
-        <p class="text-md tracking-widest">Роспись в ЗАГСе</p>
+        <p class="text-md tracking-widest">Торжественная регистрация</p>
         <p class="opacity-80 text-sm tracking-widest">ул. Мостовая, 100</p>
       </div>
 
-      <div class="relative mb-20 flex flex-col items-center text-center">
+      <div class="relative fade mb-20 flex flex-col items-center text-center">
         <div class="w-3 h-3 bg-green mb-6"></div>
         <p class="font-serif text-6xl text-green mb-2">15:40</p>
-        <p class="text-md tracking-widest">Сбор гостей возле ресторана</p>
+        <p class="text-md tracking-widest">Сбор гостей, фуршет</p>
         <p class="opacity-80 text-sm tracking-widest">
           Green Paradise, ул. Фрунзе, 66Б
         </p>
       </div>
 
-      <div class="relative mb-20 flex flex-col items-center text-center">
+      <div class="relative fade mb-20 flex flex-col items-center text-center">
         <div class="w-3 h-3 bg-green mb-6"></div>
         <p class="font-serif text-6xl text-green mb-2">16:15</p>
         <p class="text-md tracking-widest">Начало банкета</p>
       </div>
 
-      <div class="relative mb-20 flex flex-col items-center text-center">
+      <div class="relative fade mb-20 flex flex-col items-center text-center">
         <div class="w-3 h-3 bg-green mb-6"></div>
         <p class="font-serif text-6xl text-green mb-2">23:00</p>
-        <p class="text-md tracking-widest">Завершение</p>
+        <p class="text-md tracking-widest">Завершение вечера</p>
       </div>
     </section>
 
     <!-- Пожелания -->
-    <section class="max-w-6xl mx-auto px-5 py-32 fade relative">
-      <h2 class="font-serif text-5xl text-center mb-20">
+    <section class="max-w-6xl mx-auto px-5 py-32 relative">
+      <h2 class="font-serif text-5xl text-center mb-20 fade">
         П<span class="font-title uppercase text-3xl">ожелания</span>
       </h2>
 
       <div class="grid md:grid-cols-2 gap-20">
-        <div class="flex flex-col gap-6">
-          <p class="leading-relaxed opacity-90">
-            Просим не дарить нам цветы, прекрасной альтернативой станет бутылка
-            вашего любимого вина
-          </p>
+        <div class="flex md:flex-col-reverse gap-8 items-center">
+          <img
+            src="images/vine.png"
+            class="w-12 md:rotate-0 rotate-[-10deg]"
+            alt="vine"
+          />
+          <div class="flex flex-col fade">
+            <p class="leading-relaxed opacity-90">
+              Пожалуйста, не дарите нам цветы. К сожалению, мы не успеем
+              насладиться в полной мере их красотой.
+            </p>
+            <p class="mt-2">
+              Лучше порадуйте бутылочкой того напитка, который:
+            </p>
+            <p>- Напоминает вам о любви</p>
+            <p>- Вы сами любите</p>
+            <p>- Хотели бы попробовать вместе с нами</p>
+            <p class="mt-2">
+              Каждая бутылка займёт почётное место в нашей первой домашней
+              коллекции бара и будет напоминать о вас в наши семейные вечера!
+            </p>
+          </div>
         </div>
-        <div class="flex flex-col gap-6">
-          <p class="leading-relaxed opacity-90">
-            Если хотите сделать нам ценный и нужный подарок, мы будем
-            признательны за вклад в бюджет нашей молодой семьи
-          </p>
+
+        <div
+          class="flex md:flex-col md:text-left text-right gap-8 items-center"
+        >
+          <div class="flex flex-col gap-6 fade">
+            <p class="leading-relaxed opacity-90">
+              Если хотите сделать нам ценный и нужный подарок, мы будем
+              признательны за вклад в бюджет нашей молодой семьи
+            </p>
+          </div>
+          <img
+            src="images/gift.png"
+            class="w-12 md:rotate-0 rotate-[20deg]"
+            alt="gift"
+          />
         </div>
       </div>
     </section>
@@ -267,7 +331,7 @@
               Пожалуйста, подтвердите свое присутствие на торжестве и ответьте
               на несколько вопросов
             </p>
-            <p class="font-title text-2xl">до 26.02.2026</p>
+            <p class="font-title text-2xl">до 25.02.2026</p>
           </div>
 
           <div class="flex flex-col gap-1">
